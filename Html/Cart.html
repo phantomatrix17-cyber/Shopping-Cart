@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Css/Cart.css" />
+  </head>
+  <body>
+    <nav>
+      <h3>foodie</h3>
+
+      <div class="nav-links">
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Products.html">Products</a></li>
+          <li><a href="Order.html">Orders</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-call">
+        <a href="Cart.html">
+          <figure>
+            <img src="/Images/cart-svgrepo-com (1).svg" alt="icon" />
+            <span class="number">1</span>
+          </figure>
+        </a>
+
+        <p>Cooking Now</p>
+      </div>
+    </nav>
+    <div class="cover">
+      <div class="background"></div>
+    </div>
+
+    <section class="cart">
+      <div class="cartHead">
+        <h2>Your <span>Cart</span></h2>
+        <h3>(<span id="number"></span> items)</h3>
+      </div>
+      <h5>Good food! great mood!</h5>
+
+      <div class="layers">
+        <div class="firstLayer">
+          <div class="eachLayer">
+            <div class="box image">
+              <figure>
+                <img src="/Images/Creamy Butter Chicken 🍛🍗.jpg" alt="image" />
+              </figure>
+            </div>
+            <div class="box name">
+              <h4>Pan Cake</h4>
+              <span>Fluffy pancakes served with fresh fruits honey</span>
+              <div>
+                <p class="add">-</p>
+                <p class="amount">1</p>
+                <p class="minus">+</p>
+              </div>
+            </div>
+            <div class="box price">
+              <p>Ghc 15.00</p>
+              <figure><img src="/Images/trash.svg" alt="icon" /></figure>
+            </div>
+          </div>
+          <div class="eachLayer">
+            <div class="box image">
+              <figure>
+                <img src="/Images/Creamy Butter Chicken 🍛🍗.jpg" alt="image" />
+              </figure>
+            </div>
+            <div class="box name">
+              <h4>Pan Cake</h4>
+              <span>Fluffy pancakes served with fresh fruits honey</span>
+              <div>
+                <p>-</p>
+                <p>1</p>
+                <p>+</p>
+              </div>
+            </div>
+            <div class="box price">
+              <p>Ghc 15.00</p>
+              <figure><img src="/Images/trash.svg" alt="icon" /></figure>
+            </div>
+          </div>
+        </div>
+        <div class="secondLayer">
+          <h3>order summary</h3>
+          <div class="summary">
+            <div>
+              <p>subtotal</p>
+              <p class="subtotal">Ghc 0.00</p>
+            </div>
+            <div>
+              <p>delivery fee</p>
+              <p class="delivery">Ghc 0.00</p>
+            </div>
+          </div>
+          <div class="totalSection">
+            <h3>total</h3>
+            <p class="totalAmount">Ghc 0.00</p>
+          </div>
+          <a href="Order.html">
+            <div class="button">
+              <button type="button">
+                <p>Proceed to Checkout</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                  <path d="M13 18v-6h4l-5-6-5 6h4v6z"></path>
+                </svg>
+              </button>
+            </div>
+          </a>
+          <a href="Products.html">
+            <div class="continue">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="M13 18v-6h4l-5-6-5 6h4v6z"></path>
+              </svg>
+              <p>continue Shopping</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/Js/Cart.js"></script>
+  </body>
+</html>

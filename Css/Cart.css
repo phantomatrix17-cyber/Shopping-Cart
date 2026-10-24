@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  position: relative;
+  background-color: whitesmoke;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  --PADDING: 5rem;
+  --PRIMARY-COLOR: rgb(255, 153, 0);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem var(--PADDING);
+}
+.cover {
+  overflow: hidden;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  right: -200px;
+  z-index: -1;
+}
+
+.nav-call figure img {
+  width: 24px;
+  height: 100%;
+}
+
+.nav-call figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+  font-size: 0.8rem;
+}
+
+.nav-links a::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  bottom: -15px;
+  right: 50%;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:hover:after {
+  opacity: 1;
+}
+
+nav h3 {
+  text-transform: capitalize;
+  color: var(--PRIMARY-COLOR);
+  position: relative;
+}
+
+.nav-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-call .number {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  background-color: whitesmoke;
+  border-radius: 100%;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.nav-call p {
+  background-color: whitesmoke;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.background {
+  width: 850px;
+  height: 200px;
+  background-color: var(--PRIMARY-COLOR);
+  top: 200px;
+  right: -200px;
+  z-index: -1;
+  border-bottom-left-radius: 1000%;
+  border-bottom-right-radius: 50%;
+}
+
+/* CART SECTION */
+.cart {
+  padding: 4rem var(--PADDING);
+}
+
+.cartHead {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.cartHead h2 {
+  font-size: 3rem;
+}
+
+.cartHead h2 span {
+  color: var(--PRIMARY-COLOR);
+}
+
+.cartHead h3 {
+  padding-top: 0.5rem;
+  color: #333;
+}
+
+.cart h5 {
+  font-size: 1rem;
+  color: rgb(63, 63, 63);
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+}
+
+.firstLayer {
+  flex: 2;
+  min-width: 0;
+  border: 1px solid gainsboro;
+  height: fit-content;
+  max-height: 400px;
+  padding: 0.5rem;
+  overflow: auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.eachLayer {
+  min-height: 120px;
+  flex-shrink: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 3fr) minmax(0, 1.5fr);
+  box-shadow: 1px 4px 5px hsla(0, 0%, 0%, 0.05);
+  padding: 0.5rem 0;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+}
+
+.box {
+  width: 100%;
+  height: auto;
+}
+
+.image {
+  height: 100px;
+  align-self: center;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 7px;
+}
+.name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+.name h4 {
+  font-size: 1.2rem;
+}
+
+.name span {
+  display: block;
+  font-size: 0.9rem;
+  color: rgb(63, 63, 63);
+}
+
+.name div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  border: 1px solid gainsboro;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.name div p:nth-child(odd) {
+  transform: scale(1.2);
+}
+
+.name div p {
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 1rem;
+  justify-content: space-between;
+  flex-direction: column;
+  color: var(--PRIMARY-COLOR);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.price figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--PRIMARY-COLOR);
+  transition: all 0.3s ease;
+  transform: scale(0.6);
+}
+
+.price figure:hover {
+  transform: translateY(-7px) scale(0.8);
+}
+
+.price figure img {
+  filter: invert(1);
+}
+
+.secondLayer {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid gainsboro;
+  padding: 1rem;
+  overflow: auto;
+  border-radius: 10px;
+}
+.secondLayer h3 {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.summary div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.summary div p:first-child {
+  color: rgb(63, 63, 63);
+}
+.summary div p:nth-child(2) {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.summary {
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  border-bottom: 1px solid gainsboro;
+  margin-bottom: 1rem;
+}
+
+.totalSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.totalSection h3 {
+  font-size: 1.1rem;
+}
+
+.secondLayer button {
+  background-color: var(--PRIMARY-COLOR);
+  color: white;
+  outline: none;
+  border: none;
+  border: 1px solid solid gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  width: 300px;
+  font-size: 0.9rem;
+  border-radius: 18px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+.secondLayer button svg {
+  transform: rotatez(90deg);
+}
+
+.continue {
+  display: flex;
+  align-items: center;
+  color: var(--PRIMARY-COLOR);
+  font-size: 0.9rem;
+  justify-content: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+.secondLayer a {
+  text-decoration: none;
+}
+
+.continue svg {
+  transform: rotatez(-90deg);
+}
+
+.layers {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}

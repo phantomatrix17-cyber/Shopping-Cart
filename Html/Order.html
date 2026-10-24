@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Css/Order.css" />
+  </head>
+  <body>
+    <nav>
+      <h3>foodie</h3>
+
+      <div class="nav-links">
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Products.html">Products</a></li>
+          <li><a href="Order.html">Orders</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-call">
+        <a href="Cart.html">
+          <figure>
+            <img src="/Images/cart-svgrepo-com (1).svg" alt="icon" />
+            <span class="number">1</span>
+          </figure>
+        </a>
+
+        <p>Cooking Now</p>
+      </div>
+    </nav>
+    <div class="cover">
+      <div class="background"></div>
+    </div>
+
+    <section>
+      <div class="orderHead">
+        <h2>Complete Your <span>Cart</span></h2>
+      </div>
+      <h5>Provide your details and we'll get your food to you.</h5>
+    </section>
+
+    <main>
+      <div class="inputContainer">
+        <h3>Delivery Information</h3>
+        <form>
+          <label for="fullName">Full Name*</label>
+          <input
+            type="text"
+            name="fullName"
+            id="fullName"
+            placeholder="eg. John Doe"
+          />
+
+          <label for="phone">Phone Number*</label>
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="eg. 023 453 2315"
+          />
+
+          <label for="address">Delivery Address*</label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="eg. House number, street, town..."
+          />
+        </form>
+
+        <h3>Payment Method</h3>
+        <div class="payment">
+          <div class="pay">
+            <input
+              type="radio"
+              name="payment"
+              id="cash"
+              value="Cash on Delivery"
+            />
+            <p>Cash on Delivery</p>
+          </div>
+          <div class="pay">
+            <input
+              type="radio"
+              name="payment"
+              id="money"
+              value="Mobile Money"
+            />
+            <p>Mobile Money</p>
+          </div>
+        </div>
+
+        <div class="sending">
+          <img src="/Images/gmail.svg" alt="icon" />
+          <p>Send order on Gmail</p>
+        </div>
+      </div>
+
+      <div class="outputContainer">
+        <h3>Order Summary</h3>
+
+        <div class="cartDisplay">
+          <div class="eachCart">
+            <div class="box image">
+              <img src="/Images/Creamy Butter Chicken 🍛🍗.jpg" alt="image" />
+            </div>
+            <div class="box quantity">
+              <p>Jollof Rice & Chicken</p>
+              <p><img src="/Images/x.svg" alt="icon" />1</p>
+            </div>
+            <div class="box price">$26.32</div>
+          </div>
+        </div>
+
+        <div class="totalSection">
+          <div>
+            <p>Subtotal</p>
+            <p id="Subtotal">$ 0.00</p>
+          </div>
+          <div>
+            <p>Delivery Fee</p>
+            <p id="delivery">$ 0.00</p>
+          </div>
+
+          <div class="last">
+            <p>total</p>
+            <p id="total">$ 0.00</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/Js/order.js"></script>
+  </body>
+</html>
